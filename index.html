@@ -2,15 +2,49 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>Happy Valentine 💖</title>
+  <title>Our Story</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>สุขสันต์วันวาเลนไทน์ 💕</h1>
-  <p id="message"></p>
-  <button onclick="showLove()">กดดูข้อความ 💌</button>
+<div id="welcome">
+  <div class="welcome-box">
+    <h1>ยินดีต้อนรับสู่ทะเลของเรา 🐋</h1>
+    <p>
+      ใช้ปุ่ม ← → ↑ ↓ เพื่อว่ายน้ำ<br>
+      กด <b>E</b> เมื่อเจอความทรงจำ<br><br>
+      ว่ายไปเรื่อย ๆ แล้วดูเรื่องราวของเรา 💙
+    </p>
+    <button onclick="startGame()">เริ่มว่ายน้ำ</button>
+  </div>
+</div>
 
-  <script src="script.js"></script>
+<div id="game">
+  <div id="world">
+
+    <!-- ตัวผู้เล่น -->
+    <div id="player">
+      <img id="fish" src="assets/images/player.png">
+    </div>
+
+    <!-- ปลายทาง -->
+    <div id="ending">💖</div>
+
+  </div>
+</div>
+
+
+<div id="interact-hint">Press E</div>
+
+<div id="popup">
+  <div class="popup-card">
+    <img id="popup-image" />
+    <p id="popup-text"></p>
+    <button class="popup-close" onclick="closePopup()">ปิด</button>
+  </div>
+</div>
+
+
+<script src="scripts.js"></script>
 </body>
 </html>
